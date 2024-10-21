@@ -1,11 +1,11 @@
 import { Course } from '../../../../../../src/Contexts/Mooc/Courses/domain/Course';
 import { FileCourseRepository } from '../../../../../../src/Contexts/Mooc/Courses/infrastructure/persistence/FileCourseRepository';
-import { Uuid } from '../../../../../../src/Contexts/Shared/domain/value-object/Uuid';
+import { CourseId } from '../../../../../../src/Contexts/Mooc/Shared';
 
 describe('FileCourseRepository', () => {
 	it('should be save a course', async () => {
 		const expectedCourse = new Course({
-			id: new Uuid('d92cf24e-b3e4-4885-9592-5d6996a6733c'),
+			id: new CourseId('d92cf24e-b3e4-4885-9592-5d6996a6733c'),
 			name: 'Course 1',
 			duration: '100'
 		});
