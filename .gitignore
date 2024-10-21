@@ -4,4 +4,6 @@ dist/
 logs/
 data
 test-results.xml
+# ignore all .repo files
+*.repo
 src/Contexts/Mooc/Courses/infrastructure/persistance/courses/
