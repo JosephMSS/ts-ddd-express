@@ -1,6 +1,9 @@
 services:
-  # namespace de la dependencia, con esto podemos hacer referencia a la dependencia
-  # class es el path de la clase a la que hacemos referencia
-  Mooc.courses.application.CourseCreator:
+
+  Mooc.Courses.application.CourseCreator:
     class: ../../../../../Contexts/Mooc/Courses/application/CourseCreator
-    arguments: []
+    arguments: ["@Mooc.Courses.domain.CourseRepository"]
+
+  Mooc.Courses.domain.CourseRepository:
+    class: ../../../../../Contexts/Mooc/Courses/infrastructure/persistence/FileCourseRepository
+    arguments: [""]
